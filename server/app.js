@@ -18,7 +18,7 @@ const PORT= process.env.PORT;
 
 cron.schedule("* * * * *", async()=>{
     try{
-        const timestamp = new Date().toISOString().replace(/[:.]/g,"-"); //2026-04-26T08-25-40
+        const timestamp = new Date().toISOString().replace(/[:.]/g,"-"); 
         const destination = path.join(backupDir, `backup-${timestamp}`);
 
         await fs.cp(sourceDir, destination, {recursive: true},(err)=>{
