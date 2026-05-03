@@ -4,6 +4,20 @@ This project is a simple **Node.js-based automated backup system** using `node-c
 
 ---
 
+## 🎯 Project Goal
+
+The main goal of this project is to understand and implement cron jobs in a real-world MERN application.
+
+### ✅ Current Usage
+- 📦 Automating file backups at regular intervals
+
+### 🚀 Future Enhancements
+- 📧 Send automated emails (notifications, reports, reminders) using cron jobs  
+- ☁️ Integrate with cloud services for scheduled uploads  
+- 🔄 Automate system maintenance tasks (cleanup, monitoring, etc.)
+
+👉 The idea is to build a centralized automation system using cron jobs for multiple real-world use cases.
+
 ## 🚀 Features
 
 * ⏱️ Automated backups using cron jobs
@@ -13,6 +27,8 @@ This project is a simple **Node.js-based automated backup system** using `node-c
 * 🌐 Express server for running the app
 
 ---
+
+
 
 ## 🛠️ Tech Stack
 
