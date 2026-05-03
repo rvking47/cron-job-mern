@@ -1,6 +1,6 @@
 # 📦 Cron Job Backup System (MERN)
 
-This project is a simple **Node.js-based automated backup system** using `node-cron`. It periodically copies data from a source folder and stores it in a backup directory with a timestamp.
+This project is a simple **Node.js-based automated backup system** built using `node-cron`. It periodically copies data from a source folder and stores it in a backup directory with a unique timestamp, ensuring safe and organized backups.
 
 ---
 
