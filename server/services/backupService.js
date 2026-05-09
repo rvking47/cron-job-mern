@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import emailService from "./emailService.js";
 
 const __filename= fileURLToPath(import.meta.url);
 const __dirname= path.dirname(__filename);
@@ -13,14 +14,9 @@ const backupService = async()=>{
         const timestamp = new Date().toISOString().replace(/[:.]/g,"-"); 
         const destination = path.join(backupDir, `backup-${timestamp}`);
 
-        await fs.cp(sourceDir, destination, {recursive: true},(err)=>{
-            if(err){
-              console.error("Backup failed :", err);
-            }
-            else{
-              console.log(`Backup created at ${destination}`);
-            }
-        });
+        await fs.promises.cp(sourceDir, destination, {recursive: true});
+        await emailService();
+        console.log(`Backup created at ${destination}`);
     }
     catch(err){
         console.error("Backup failed :", err);
